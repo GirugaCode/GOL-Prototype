@@ -426,7 +426,17 @@ function prev() {
     }
 }
 
-// TODO: Jump to Step
-// Capture the value of the selected button
-// Update the value of the stepIterator
-// Displays instructions
+function toStep(e) {
+
+    for(i=0; i<11 ; i++){
+        let stepper = document.getElementById("Step" + (i+1));
+        stepper.classList.remove('active');
+    }
+
+    for(i=0; i<e ; i++){
+        let stepper = document.getElementById("Step" + (i+1));
+        stepper.classList.add('active');
+    }
+    
+    document.getElementById("instructions").innerHTML = instructions[e - 1]
+}
