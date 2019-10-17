@@ -10,13 +10,13 @@ var instructions =  [
     in <i>setup</i> and <i>draw</i> (remove the <i>//</i> in front of the code) and confirm that
     you now see a grid of 20x20 cells in your canvas. 
 
-    <br><img src="imgs/Step-One-1.png" alt="Step One Image" height="300" width="300">
+    <br><img src="imgs/Step-One-1.png" alt="Step One Image" width="400">
 
     <br>Also try changing the number you pass to <code>new Grid()</code> - a smaller number means the 
     <code>cellSize</code> is smaller and <code>numberOfRows</code> and <code>numberOfColumns</code> should be bigger.
     So new <code>Grid(10)</code> should make a 40 x 40 grid (cells are half as big):
     
-    <br><img src="imgs/Step-One-2.png" alt="Step Two Image" height="300" width="300">
+    <br><img src="imgs/Step-One-2.png" alt="Step Two Image" width="400">
     `,
 
     `<strong>Step 2</strong>: Now we need to add a way to keep track of the contents of each cell in the grid. 
@@ -38,7 +38,7 @@ var instructions =  [
     Check that the console prints out <i>Array(20)</i>
     (you should also be able to expand it and see that each position also holds an empty array).
     
-    <br><img src="imgs/Step-Two-1.png" alt="Step Two Image" height="300" width="400">
+    <br><img src="imgs/Step-Two-1.png" alt="Step Two Image" width="600">
     `,
 
     
@@ -91,13 +91,13 @@ var instructions =  [
     <br><br><i><strong>Check:</strong></i> Temporarily change <code>this.isAlive = false;</code>
     to <code>this.isAlive = true;</code> inside of the cell constructor and confirm
     that your <code>if</code> statement is correctly assigning colors depending
-    on the cell's value. 
+    on the cell's value.<br>
 
     <br>All cells dead:
-    <br><img src="imgs/Step-Four-1.png" alt="Step Four Image" height="350" width="400">
+    <br><img src="imgs/Step-Four-1.png" alt="Step Four Image" width="420">
 
     <br>All cells alive:
-    <br><img src="imgs/Step-Four-2.png" alt="Step Four Image" height="350" width="400">
+    <br><img src="imgs/Step-Four-2.png" alt="Step Four Image" width="420">
     `,
 
     `<strong>Step 5</strong>: Starting all the cells as all dead or all alive isn't 
@@ -217,7 +217,7 @@ var instructions =  [
     position 1,1 in the grid, it's neighbor cells will be the 8 surrounding 
     cells in the grid:
 
-    <br><img src="imgs/Step-Seven-1.png" alt="Step Seven Image" height="400" width="500">
+    <br><img src="imgs/Step-Seven-1.png" alt="Step Seven Image" width="500">
 
     <br>You can see that the x-values for neighbor cells are either 1 less, the 
     same, or 1 more than the current cell's x position. The same is true for 
@@ -279,7 +279,7 @@ var instructions =  [
     Generate a few of the errors and see if you can spot the pattern of 
     when it happens. 
 
-    <br><br><img src="imgs/Step-Eight-1.png" alt="Step Eight Image" height="400" width="500">
+    <br><br><img src="imgs/Step-Eight-1.png" alt="Step Eight Image" width="500">
     
     <br>Take a look at this example from our 3x3 grid again. 
     What happens when you call getNeighbors on a cell that is along an edge? 
