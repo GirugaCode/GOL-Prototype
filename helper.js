@@ -1,7 +1,4 @@
 var instructions =  [
-    // Each one to be HTML?
-    // Insert HTML javascript
-    // HTML Safe - Ruby on Rails
     `<strong>Step 1</strong>: Creating the Game of Life
     <br>For this tutorial, we'll be making edits to the <i>index.js</i> file. 
     <br>Inside of <i>index.js</i>, there is already have a <i>Grid</i> class with a draw function. 
@@ -27,7 +24,7 @@ var instructions =  [
     assign <i>cells</i> to a new array with length equal to <i>numberOfColumns</i>. Then, for each position 
     in the array, assign it to another new array with length equal to <i>numberOfRows</i>. 
     <br>Here's one way to create a 2D array: 
-    <pre>
+    <pre class="code-block">
         <code>
     var x = 2; // how big the first array should be 
     var y = 2; // how big each array inside of the first array should be 
@@ -125,13 +122,13 @@ var instructions =  [
     <br><br>You can try <code>print(random(2));</code> and <code>print(floor(random(2)));</code> to
     see the results in the console. 
     
-    <br><img src="imgs/Step-Five-1.png" alt="Step Five Image" height="400" width="500">
+    <br><img src="imgs/Step-Five-1.png" alt="Step Five Image" width="600">
     
     <br>Finally, add <code>grid.randomize();</code> to the bottom of the <code>setup</code> function. 
     <em><strong>Check:</strong></em> Each time you run the program, you should now be seeing a 
     different mix of dead and alive cells.
     
-    <br><img src="imgs/Step-Five-2.png" alt="Step Five Image" height="400" width="500">
+    <br><img src="imgs/Step-Five-2.png" alt="Step Five Image" width="500">
     `,
 
     
@@ -411,14 +408,17 @@ var instructions =  [
     In the next assignment, you'll copy over your GOL code so far and add some new features.`,
 ];
 
+// Keeps track of the steps we are taking through the instructions
 currentStep = -1;
 
+// Moves a step forward in the instructions
 function next() {
     if (currentStep < instructions.length -1){
         document.getElementById("instructions").innerHTML = instructions[currentStep += 1]
     }
 }
 
+// Moves a step backwards in the instructions
 function prev() {
     if (currentStep > 0) {
         document.getElementById("instructions").innerHTML = instructions[currentStep -= 1]
@@ -426,17 +426,36 @@ function prev() {
     }
 }
 
-function toStep(e) {
+// Logic to go through the progress bar
+function toStep(chosenStep) {
 
-    for(i=0; i<11 ; i++){
-        let stepper = document.getElementById("Step" + (i+1));
-        stepper.classList.remove('active');
+    for(i=1; i<=11 ; i++){
+        let stepper = document.getElementById("Step" + (i));
+        if (i <= chosenStep) {
+            // add active
+            stepper.classList.add('active');
+        } else {
+            //remove active
+            stepper.classList.remove('active');
+        }
     }
 
-    for(i=0; i<e ; i++){
-        let stepper = document.getElementById("Step" + (i+1));
-        stepper.classList.add('active');
+    document.getElementById("instructions").innerHTML = instructions[chosenStep - 1]
+}
+
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '37') {
+       // left arrow
+       prev()
     }
-    
-    document.getElementById("instructions").innerHTML = instructions[e - 1]
+    if (e.keyCode == '39') {
+       // right arrow
+       next()
+    }
+
 }

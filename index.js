@@ -33,10 +33,10 @@ function keyPressed() {
 }
 
 /* Step 6a - Added a mousePressed function and added the randomize function from grid*/
-function mousePressed(){
-  grid.updateNeighborCounts();
-  grid.randomize();
-}
+// function mousePressed(){
+//   grid.updateNeighborCounts();
+//   grid.randomize();
+// }
 
 class Grid {
   constructor (cellSize) {
