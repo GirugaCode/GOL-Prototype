@@ -415,6 +415,7 @@ currentStep = -1;
 function next() {
     if (currentStep < instructions.length -1){
         document.getElementById("instructions").innerHTML = instructions[currentStep += 1]
+        toStep(currentStep)
     }
 }
 
@@ -422,7 +423,7 @@ function next() {
 function prev() {
     if (currentStep > 0) {
         document.getElementById("instructions").innerHTML = instructions[currentStep -= 1]
-
+        toStep(currentStep)
     }
 }
 
