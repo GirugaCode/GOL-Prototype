@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Prox-Regular;
+    src: url(Fonts/ProximaNova-Regular.otf)
+}
+
 body {
     padding: 0;
   } 
@@ -16,6 +21,7 @@ body {
 
 #progress-label{
     margin-left: 50px;
+    font-family: Prox-Regular;
 }
 
 .instruction-panel {
@@ -27,6 +33,7 @@ body {
     border: 2px black solid;
     line-height: 1.3em;
     padding: 15px;
+    font-family: Prox-Regular
 }
 
 .step-container {
@@ -44,7 +51,7 @@ body {
     position: relative;
     text-align: center;
     text-transform: uppercase;
-    color: #7d7d7d;
+    color: #303030;
 }
 .progressbar li:before {
     width: 30px;
@@ -52,7 +59,7 @@ body {
     content: counter(step);
     counter-increment: step;
     line-height: 30px;
-    border: 2px solid #7d7d7d;
+    border: 2px solid #303030;
     display: block;
     text-align: center;
     margin: 0 auto 10px auto;
@@ -64,7 +71,7 @@ body {
     height: 2px;
     content: '';
     position: absolute;
-    background-color: #7d7d7d;
+    background-color: #303030;
     top: 15px;
     left: -50%;
     z-index: -1;
@@ -73,13 +80,13 @@ body {
     content: none;
 }
 .progressbar li.active {
-    color: green;
+    color: #0D4062;
 }
 .progressbar li.active:before {
-    border-color: #55b776;
+    border-color: #087CB8;
 }
 .progressbar li.active + li:after {
-    background-color: #55b776;
+    background-color: #087CB8;
 }
 
 pre {
