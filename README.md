@@ -19,3 +19,6 @@ As a RAMP TA for Make School, I have the honor of updating the UI/UX for the Gam
 
 ### Update 5
 ![Update Five](imgs/GOL_UPDATE_5.png)
+
+### Update 6
+![Update Five](imgs/GOL_UPDATE_6.png)
