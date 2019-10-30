@@ -12,6 +12,7 @@ body {
     align-items: flex-start;
     justify-content: left;
     flex-direction: column;
+    margin-left: 50px;
 }
 
 #top-flex-container{
@@ -25,15 +26,17 @@ body {
 }
 
 .instruction-panel {
-    width: 650px;
+    width: 1150px;
     margin-left: 16px;
 }
 
 .instruction-text {
-    border: 2px black solid;
+    border: 2.5px #087CB8 solid;
+    border-collapse: collapse;
     line-height: 1.3em;
     padding: 15px;
-    font-family: Prox-Regular
+    font-family: Prox-Regular;
+    font-size: 14pt;
 }
 
 .step-container {
@@ -41,7 +44,7 @@ body {
 }
 .progressbar {
     counter-reset: step;
-    width: 600px;
+    width: 900px;
 }
 .progressbar li {
     list-style-type: none;

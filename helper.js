@@ -409,11 +409,11 @@ var instructions =  [
 ];
 
 // Keeps track of the steps we are taking through the instructions
-currentStep = -1;
+currentStep = 0;
 
 // Moves a step forward in the instructions
 function next() {
-    if (currentStep < instructions.length -1){
+    if (currentStep < instructions.length){
         document.getElementById("instructions").innerHTML = instructions[currentStep += 1]
         toStep(currentStep)
     }
@@ -421,7 +421,7 @@ function next() {
 
 // Moves a step backwards in the instructions
 function prev() {
-    if (currentStep > 0) {
+    if (currentStep > 1) {
         document.getElementById("instructions").innerHTML = instructions[currentStep -= 1]
         toStep(currentStep)
     }
