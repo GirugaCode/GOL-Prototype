@@ -444,8 +444,10 @@ function toStep(chosenStep) {
     document.getElementById("instructions").innerHTML = instructions[chosenStep - 1]
 }
 
+// Assigns the key press from the HTML to the checkKey function
 document.onkeydown = checkKey;
 
+// Function to use left and right arrow keys through the steps of the instructions
 function checkKey(e) {
 
     e = e || window.event;
